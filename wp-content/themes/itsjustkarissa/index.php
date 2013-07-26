@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="<? bloginfo('charset') ?>">
+
+  <link rel="pingback" href="<? bloginfo('pingback_url') ?>">
+
+  <title><? wp_title('|', true, 'right') ?> <? bloginfo('name') ?></title>
+
+  <link rel="stylesheet" type="text/css" href="<?= get_stylesheet_uri() ?>">
+
+  <? wp_head() ?>
+</head>
+
+<body class="<?= is_user_logged_in() ? 'logged_in' : NULL ?>">
+  <div class="container">
+    <h1 class="logo"><a href="/">It's Just Karissa</a></h1>
+
+    <div class="foliage"></div>
+    <div class="birdy"></div>
+
+    <div class="content">
+      <?php if(have_posts()): while(have_posts()): the_post(); ?>
+        <div <?php post_class(); ?>>
+
+          <div class="date"><?php the_time('dmY'); ?></div>
+
+          <div class="post-content">
+            <?php the_content('Read the rest of this entry &raquo;'); ?>
+          </div>
+        </div>
+      <?php endwhile; ?>
+
+        <div class="navigation">
+          <?
+            $older = get_adjacent_post(false, '', true);
+            $newer = get_adjacent_post(false, '', false);
+          ?>
+          <? if(!empty($older)): ?>
+            <a href="<?= get_permalink($older->ID); ?>" class="left">Older Entry</a>
+          <? endif;if(!empty($newer)): ?>
+            <a href="<?= get_permalink($newer->ID); ?>" class="right">Newer Entry</a>
+          <? endif; ?>
+        </div>
+
+      <?php else: ?>
+        <!-- No posts found -->
+      <?php endif; ?>
+    </div>
+
+    <div class="buddha"></div>
+  </div>
+
+  <div id="bee"></div>
+  <div class="banner"></div>
+
+  <script type="text/javascript">
+    document.onmousemove = function(e) {
+      document.getElementById('bee').style.top = e.pageY*1 + 20 + 'px';
+      document.getElementById('bee').style.left = e.pageX*1 + 10 + 'px';
+    }
+  </script>
+
+  <? wp_footer(); ?>
+</body>
+</html>

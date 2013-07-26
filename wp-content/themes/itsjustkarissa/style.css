@@ -1,0 +1,111 @@
+/*
+Theme Name: itsjustkarissa
+Theme URI: http://itsjustkarissa.com
+Description: July 2013 Theme For itsjustkarissa.com
+Author: Karissa & John
+Author URI: http://itsjustkarissa.com
+Version: 1.0
+
+Meow. Prrr.
+*/
+@font-face {
+  font-family: Copse;
+  src: url('/wp-content/themes/itsjustkarissa/fonts/copse-regular-webfont.eot');
+  src: url('/wp-content/themes/itsjustkarissa/fonts/copse-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/wp-content/themes/itsjustkarissa/fonts/copse-regular-webfont.woff') format('woff'),
+       url('/wp-content/themes/itsjustkarissa/fonts/copse-regular-webfont.ttf') format('truetype'),
+       url('/wp-content/themes/itsjustkarissa/fonts/copse-regular-webfont.svg#copseregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #3e3e3e;
+  font-family: Copse;
+  font-size: 12px;
+  line-height: 18px;
+}
+.logged_in .banner {
+  top: 28px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+}
+.logo a {
+  background: url('/wp-content/themes/itsjustkarissa/images/sprite.png');
+  display: block;
+  height: 55px;
+  margin: 70px 0 0 162px;
+  text-indent: -9999px;
+  width: 272px;
+}
+.foliage {
+  background: url('/wp-content/themes/itsjustkarissa/images/sprite.png') -314px -64px;
+  height: 58px;
+  position: absolute;
+  top: 45px;
+  width: 68px;
+}
+.birdy {
+  background: url('/wp-content/themes/itsjustkarissa/images/sprite.png') -274px -64px;
+  height: 69px;
+  position: absolute;
+  top: 34px;
+  right: 0;
+  width: 38px;
+}
+.content {
+  margin-top: 58px;
+}
+.content .date {
+  margin-bottom: 2px;
+}
+.content img {
+  display: block;
+  margin: 10px 0;
+}
+.navigation {
+  height: 24px;
+  margin: 12px 0 8px;
+}
+.navigation a {
+  background-image: url('/wp-content/themes/itsjustkarissa/images/sprite.png');
+  display: block;
+  height: 24px;
+  text-indent: -9999px;
+  width: 40px;
+}
+.navigation .right {
+  background-position: -426px -64px;
+  float: right;
+}
+.navigation .left {
+  background-position: -384px -64px;
+  float: left;
+}
+.buddha {
+  background: url('/wp-content/themes/itsjustkarissa/images/sprite.png') 0 -57px;
+  height: 215px;
+  margin: 0 0 50px 186px;
+  width: 230px;
+}
+#bee {
+  background: url('/wp-content/themes/itsjustkarissa/images/sprite.png') -468px -64px;
+  height: 8px;
+  position: absolute;
+  width: 12px;
+  top: -1000px;
+}
+.banner {
+  background: url('/wp-content/themes/itsjustkarissa/images/sprite.png') -275px 0px;
+  height: 62px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 205px;
+}
