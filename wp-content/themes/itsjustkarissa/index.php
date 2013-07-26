@@ -48,17 +48,49 @@
       <?php endif; ?>
     </div>
 
-    <div class="buddha"></div>
+    <div id="buddha"></div>
   </div>
 
   <div id="bee"></div>
   <div class="banner"></div>
 
   <script type="text/javascript">
+    // Bee mouse follow
     document.onmousemove = function(e) {
       document.getElementById('bee').style.top = e.pageY*1 + 20 + 'px';
       document.getElementById('bee').style.left = e.pageX*1 + 10 + 'px';
     }
+
+    // Buddha levitate
+    function buddha(element) {
+      var direction = 1;
+      var top = 0;
+
+      function frame() {
+        if(direction)
+        {
+          top++;
+        }
+        else
+        {
+          top--;
+        }
+
+        element.style.top = top + 'px';
+
+        if(top == 30)
+        {
+          direction = 0;
+        }
+        if(top == 0)
+        {
+          direction = 1;
+        }
+      }
+
+      var id = setInterval(frame, 75);
+    }
+    buddha(document.getElementById('buddha'));
   </script>
 
   <? wp_footer(); ?>

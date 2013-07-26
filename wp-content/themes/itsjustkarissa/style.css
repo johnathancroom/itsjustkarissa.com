@@ -88,10 +88,11 @@ body {
   background-position: -384px -64px;
   float: left;
 }
-.buddha {
+#buddha {
   background: url('/wp-content/themes/itsjustkarissa/images/sprite.png') 0 -57px;
   height: 215px;
   margin: 0 0 50px 186px;
+  position: relative;
   width: 230px;
 }
 #bee {
