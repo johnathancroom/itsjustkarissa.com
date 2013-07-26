@@ -55,10 +55,12 @@
   <div class="banner"></div>
 
   <script type="text/javascript">
-    // Bee mouse follow
-    document.onmousemove = function(e) {
-      document.getElementById('bee').style.top = e.pageY*1 + 20 + 'px';
-      document.getElementById('bee').style.left = e.pageX*1 + 10 + 'px';
+    // Bee mouse follow (not on touch devices)
+    if(!('ontouchstart' in document.documentElement)) {
+      document.onmousemove = function(e) {
+        document.getElementById('bee').style.top = e.pageY*1 + 20 + 'px';
+        document.getElementById('bee').style.left = e.pageX*1 + 10 + 'px';
+      }
     }
 
     // Buddha levitate
