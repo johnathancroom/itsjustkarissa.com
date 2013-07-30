@@ -37,9 +37,9 @@
             $newer = get_adjacent_post(false, '', false);
           ?>
           <? if(!empty($older)): ?>
-            <a href="<?= get_permalink($older->ID); ?>" class="left">Older Entry</a>
+            <a href="<?= get_permalink($older->ID); ?>" class="right">Older Entry</a>
           <? endif;if(!empty($newer)): ?>
-            <a href="<?= get_permalink($newer->ID); ?>" class="right">Newer Entry</a>
+            <a href="<?= get_permalink($newer->ID); ?>" class="left">Newer Entry</a>
           <? endif; ?>
         </div>
 
